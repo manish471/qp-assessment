@@ -30,7 +30,6 @@ Grocery Booking API is a Node.js-based application for managing grocery items an
 ### Prerequisites
 
 - Docker and Docker Compose
-- Node.js and npm
 
 ### Installation
 
@@ -38,7 +37,7 @@ Grocery Booking API is a Node.js-based application for managing grocery items an
 
    ```bash
    git clone https://github.com/manish471/qp-assessment.git
-   cd grocery-booking-api
+   cd qp-assessment/grocery-booking-api
    docker-compose up --build
 
 ### API Documentation Endpoint
