@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - db
+    command: npm run dev
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: grocery_booking
+    ports:
+      - "3306:3306"
+    volumes:
+    - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
